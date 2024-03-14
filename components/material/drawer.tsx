@@ -9,7 +9,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-
+import Link from 'next/link'
 // react icons
 
 // Icons
@@ -21,6 +21,7 @@ import { RiInboxArchiveLine } from "react-icons/ri";
 import { IoMdMailUnread } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { FaQuestionCircle } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa";
 
 interface NavItem {
   href: string;
@@ -34,9 +35,9 @@ export default function TemporaryDrawer() {
   const navItems: NavItem[] = [
     { href: "/", label: "Home", icon: <MdHome /> },
     { href: "/", label: "blog", icon: <FaStickyNote /> },
-    { href: "/", label: "College", icon: <IoIosSchool /> },
-    { href: "/", label: "About", icon: <HiOfficeBuilding /> },
-    { href: "/", label: "FAQs", icon: <FaQuestionCircle /> },
+    { href: "/college", label: "College", icon: <IoIosSchool /> },
+    { href: "/resume", label: "Resume", icon: <HiOfficeBuilding /> },
+    { href: "/skills", label: "Needed Skills", icon: <FaLaptopCode /> },
   ];
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -47,10 +48,12 @@ export default function TemporaryDrawer() {
       <List>
         {navItems.map((items, index) => (
           <ListItem disablePadding key={index}>
-            <ListItemButton>
-              <ListItemIcon>{items.icon}</ListItemIcon>
-              <ListItemText primary={items.label} />
-            </ListItemButton>
+            <Link href={items.href}>
+              <ListItemButton>
+                <ListItemIcon>{items.icon}</ListItemIcon>
+                <ListItemText primary={items.label} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
