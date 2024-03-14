@@ -9,7 +9,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Link from 'next/link'
+import Link from "next/link";
 // react icons
 
 // Icons
@@ -20,7 +20,7 @@ import { HiOfficeBuilding } from "react-icons/hi";
 import { RiInboxArchiveLine } from "react-icons/ri";
 import { IoMdMailUnread } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
-import { FaQuestionCircle } from "react-icons/fa";
+import { FaFileAlt } from "react-icons/fa";
 import { FaLaptopCode } from "react-icons/fa";
 
 interface NavItem {
@@ -36,7 +36,7 @@ export default function TemporaryDrawer() {
     { href: "/", label: "Home", icon: <MdHome /> },
     { href: "/", label: "blog", icon: <FaStickyNote /> },
     { href: "/college", label: "College", icon: <IoIosSchool /> },
-    { href: "/resume", label: "Resume", icon: <HiOfficeBuilding /> },
+    { href: "/resume", label: "Resume", icon: <FaFileAlt /> },
     { href: "/skills", label: "Needed Skills", icon: <FaLaptopCode /> },
   ];
   const toggleDrawer = (newOpen: boolean) => () => {

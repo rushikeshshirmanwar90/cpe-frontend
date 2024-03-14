@@ -1,12 +1,7 @@
-import { CollegeHomeSection } from "@/components/custom/hero-section";
 import React from "react";
 
 const page = () => {
-  return (
-    <div>
-      <CollegeHomeSection />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default page;

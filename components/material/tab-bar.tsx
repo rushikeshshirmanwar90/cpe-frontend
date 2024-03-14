@@ -54,6 +54,7 @@ export default function TabBar() {
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
+          TabIndicatorProps={{ color: "black" }}
           centered
         >
           <Tab

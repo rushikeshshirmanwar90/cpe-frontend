@@ -2,6 +2,35 @@ import React from "react";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "../ui/button";
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+
 export default function Resume() {
   return (
     <div className="w-full py-12 space-y-2">
@@ -81,7 +110,38 @@ export default function Resume() {
             <div className="space-y-2">
               <div className="flex items-center justify-between mb-10">
                 <h2 className="text-lg font-semibold">Skills</h2>
-                <Button>Add Skills</Button>
+                <Dialog>
+                  <DialogTrigger>
+                    <Button>Add Skills</Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Select the Skills</DialogTitle>
+                      <DialogDescription>
+                        <Select>
+                          <SelectTrigger className="w-full mt-10">
+                            <SelectValue placeholder="Select a skills" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectGroup>
+                              <SelectLabel>skills</SelectLabel>
+                              <SelectItem value="apple">React web Developer</SelectItem>
+                              <SelectItem value="banana">Nodejs</SelectItem>
+                              <SelectItem value="blueberry">
+                                React Native
+                              </SelectItem>
+                              <SelectItem value="grapes">VB.net</SelectItem>
+                              <SelectItem value="pineapple">
+                                PHP Developer
+                              </SelectItem>
+                            </SelectGroup>
+                          </SelectContent>
+                        </Select>
+                      </DialogDescription>
+                    </DialogHeader>
+                    <Button>Take a Test</Button>
+                  </DialogContent>
+                </Dialog>
               </div>
               <ul className="grid grid-cols-2 gap-4 text-sm list-disc list-inside `md:grid-cols-3 lg:grid-cols-4 dark:text-gray-400">
                 <li>JavaScript</li>
@@ -94,28 +154,6 @@ export default function Resume() {
         </div>
       </div>
     </div>
-  );
-}
-
-function CalendarIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-      <line x1="16" x2="16" y1="2" y2="6" />
-      <line x1="8" x2="8" y1="2" y2="6" />
-      <line x1="3" x2="21" y1="10" y2="10" />
-    </svg>
   );
 }
 
