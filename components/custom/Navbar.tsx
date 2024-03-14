@@ -12,9 +12,8 @@ import { FaHeart } from "react-icons/fa";
 
 const Navbar = () => {
   const isSignedIn = true;
-
   const yellowColor = "bg-amber-500";
-
+  
   return (
     <>
       <nav className="flex items-center justify-between mt-1 sticky top-0 left-0 bg-white shadow-xl py-3  z-50">

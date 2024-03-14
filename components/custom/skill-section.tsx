@@ -22,7 +22,7 @@ export default function Skills() {
       </CardHeader>
       <CardContent>
         <p className="mb-4">
-          We're looking for an experienced frontend developer to join our new
+          We are looking for an experienced frontend developer to join our new
           project team
         </p>
         <div className="flex items-center space-x-2 mb-4">

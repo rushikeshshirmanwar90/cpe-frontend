@@ -20,6 +20,7 @@ import { HiOfficeBuilding } from "react-icons/hi";
 import { RiInboxArchiveLine } from "react-icons/ri";
 import { IoMdMailUnread } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
+import { FaQuestionCircle } from "react-icons/fa";
 
 interface NavItem {
   href: string;
@@ -35,6 +36,7 @@ export default function TemporaryDrawer() {
     { href: "/", label: "blog", icon: <FaStickyNote /> },
     { href: "/", label: "College", icon: <IoIosSchool /> },
     { href: "/", label: "About", icon: <HiOfficeBuilding /> },
+    { href: "/", label: "FAQs", icon: <FaQuestionCircle /> },
   ];
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -43,8 +45,8 @@ export default function TemporaryDrawer() {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {navItems.map((items) => (
-          <ListItem disablePadding>
+        {navItems.map((items, index) => (
+          <ListItem disablePadding key={index}>
             <ListItemButton>
               <ListItemIcon>{items.icon}</ListItemIcon>
               <ListItemText primary={items.label} />
