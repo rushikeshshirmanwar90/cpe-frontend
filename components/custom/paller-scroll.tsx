@@ -5,43 +5,44 @@ import { HeroParallax } from "../ui/hero-parallax";
 export function ScrollHeroSection() {
   return <HeroParallax products={products} />;
 }
+
 export const products = [
   {
-    title: "Moonbeam",
+    title: "TCS",
     link: "",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+      "/companies/TCS.jpg",
   },
   {
-    title: "Cursor",
+    title: "IBM",
     link: "",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+      "/companies/IBM.jpg",
   },
   {
     title: "Rogue",
     link: "",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+      "/companies/Reliance .jpg",
   },
 
   {
-    title: "Editorially",
+    title: "cognizant",
     link: "",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+      "/companies/cognizant .jpg",
   },
   {
-    title: "Editrix AI",
+    title: "Meta",
     link: "",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+      "/companies/meta.jpg",
   },
   {
-    title: "Pixel Perfect",
+    title: "OpenAI",
     link: "",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+      "/companies/OpenAI.jpg",
   },
 
   {

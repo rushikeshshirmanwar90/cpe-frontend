@@ -12,7 +12,7 @@ const words = [
 
 export default function About_1() {
   return (
-    <div className="flex items-center justify-center mt-12 mx-5">
+    <div className="flex items-center justify-center my-20 mx-5">
       <div className="max-w-[80rem] mx-auto p-8 bg-white rounded-lg shadow-2xl">
         <h1 className="text-5xl font-bold text-gray-900 w-[50rem] text-center">
           Discover What <span className="text-indigo-950">Companies</span> Truly
