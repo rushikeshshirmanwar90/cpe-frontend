@@ -1,76 +1,53 @@
-import { Button } from "@/components/ui/button"
-import { CardHeader, CardContent, Card } from "@/components/ui/card"
+import React from 'react'; // Add React import
 
-export default function Component() {
+import { CardHeader, CardContent, CardFooter, Card } from "@/components/ui/card";
+import { RadioGroupItem, RadioGroup } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+
+export default function MCQs() {
   return (
     <Card className="w-full max-w-lg">
-      <CardHeader className="flex items-start">
-        <div className="flex-1">
-          <div>Question 1</div>
-          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">Select the correct answer.</p>
-        </div>
-        <Button className="ml-2" size="icon" variant="outline">
-          <HelpCircleIcon className="h-4 w-4" />
-          <span className="sr-only">Help</span>
-        </Button>
+      <CardHeader className="pb-0">
+        <div>JavaScript Quiz</div>
       </CardHeader>
-      <CardContent className="grid gap-4">
-        <form>
-          <div className="grid gap-2">
-            <label className="text-sm font-medium leading-5" htmlFor="paris">
-              What is the capital of France?
-            </label>
-            <div className="flex items-center gap-2">
-              <input id="paris" name="answer" type="radio" value="paris" />
-              <label className="text-sm font-normal leading-none peer-disabled:cursor-not-allowed" htmlFor="paris">
-                Paris
-              </label>
+      <CardContent className="space-y-4">
+        <div className="space-y-4">
+          <p className="font-semibold">What is the output of the following code?</p>
+          <div>console.log(1 + "2" + "2" + 3);</div>
+        </div>
+        <div className="space-y-2">
+          <RadioGroup defaultValue="a">
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem id="mcq-a" value="a" /> {/* Remove name prop */}
+              <Label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed" htmlFor="mcq-a">
+                a) 1223
+              </Label>
             </div>
-            <div className="flex items-center gap-2">
-              <input id="berlin" name="answer" type="radio" value="berlin" />
-              <label className="text-sm font-normal leading-none peer-disabled:cursor-not-allowed" htmlFor="berlin">
-                Berlin
-              </label>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem id="mcq-b" value="b" /> {/* Remove name prop */}
+              <Label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed" htmlFor="mcq-b">
+                b) 6
+              </Label>
             </div>
-            <div className="flex items-center gap-2">
-              <input id="rome" name="answer" type="radio" value="rome" />
-              <label className="text-sm font-normal leading-none peer-disabled:cursor-not-allowed" htmlFor="rome">
-                Rome
-              </label>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem id="mcq-c" value="c" /> {/* Remove name prop */}
+              <Label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed" htmlFor="mcq-c">
+                c) 7
+              </Label>
             </div>
-            <div className="flex items-center gap-2">
-              <input id="london" name="answer" type="radio" value="london" />
-              <label className="text-sm font-normal leading-none peer-disabled:cursor-not-allowed" htmlFor="london">
-                London
-              </label>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem id="mcq-d" value="d" /> {/* Remove name prop */}
+              <Label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed" htmlFor="mcq-d">
+                d) 1223
+              </Label>
             </div>
-          </div>
-          <div className="flex flex-row-reverse">
-            <Button>Submit</Button>
-          </div>
-        </form>
+          </RadioGroup>
+        </div>
       </CardContent>
+      <CardFooter className="border-t p-4 justify-end">
+        <Button>Clear</Button>
+      </CardFooter>
     </Card>
-  )
-}
-
-function HelpCircleIcon(props : any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="12" cy="12" r="10" />
-      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-      <path d="M12 17h.01" />
-    </svg>
-  )
+  );
 }

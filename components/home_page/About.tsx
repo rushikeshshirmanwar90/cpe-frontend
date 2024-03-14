@@ -5,7 +5,7 @@ export default function About() {
         <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-1/2 px-4">
             <h2 className="text-3xl font-bold mb-4">About Us</h2>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-lg">
               Welcome to our company! We are a team of passionate individuals
               dedicated to providing high-quality products and exceptional
               customer service. Lorem ipsum dolor sit amet, consectetur

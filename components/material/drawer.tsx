@@ -34,7 +34,7 @@ export default function TemporaryDrawer() {
 
   const navItems: NavItem[] = [
     { href: "/", label: "Home", icon: <MdHome /> },
-    { href: "/", label: "blog", icon: <FaStickyNote /> },
+    { href: "/blog", label: "blog", icon: <FaStickyNote /> },
     { href: "/college", label: "College", icon: <IoIosSchool /> },
     { href: "/resume", label: "Resume", icon: <FaFileAlt /> },
     { href: "/skills", label: "Needed Skills", icon: <FaLaptopCode /> },
